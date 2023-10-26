@@ -14,6 +14,10 @@ int main(int argc, const char** argv) {
 		"squid_points.png"
 	};
 	
+	if (argc != 4) {
+		std::cout << "Filename Input Error. Using Default Files. (squid_body.png, squid_head,png, squid_points.png" << std::endl;
+	}
+
 	if (!loadFiles((argc == 4 ? argv : files), images)) {
 		system("PAUSE");
 		return -1;
@@ -34,7 +38,7 @@ bool loadFiles(const char** files, CxImage** images) {
 		std::string fileName = std::string(files[i + 1]);
 		std::wstring fileNameByte = std::wstring(fileName.begin(), fileName.end());
 		if(!images[i]->Load(fileNameByte.c_str(), CXIMAGE_FORMAT_PNG)) {
-			std::cout << "Failed to load image: " << fileName << "\n";
+			std::cout << "Failed to load image: " << fileName << std::endl;
 			return false;
 		}
 	}
