@@ -22,8 +22,12 @@ int main(int argc, const char** argv) {
 		system("PAUSE");
 		return -1;
 	}
+
+	std::cout << "Files are opened Successfully. Converting Ongoing..." << std::endl;
 	
 	processImages(images);
+
+	std::cout << "Converting Done..! Saved as Result.png." << std::endl;
 
 	for (int i = 0; i < 3; i++) {
 		free(images[i]);
