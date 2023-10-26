@@ -30,7 +30,7 @@ int main(int argc, const char** argv) {
 	std::cout << "Converting Done..! Saved as Result.png." << std::endl;
 
 	for (int i = 0; i < 3; i++) {
-		free(images[i]);
+		delete(images[i]);
 	}
 
 	system("PAUSE");
