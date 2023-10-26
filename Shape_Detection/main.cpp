@@ -37,13 +37,11 @@ bool detectShape(string fileName, Mat* img_org) {
     for (size_t i = 0; i < contours.size(); i++) {
         approxPolyDP(Mat(contours[i]), approx,
             arcLength(Mat(contours[i]), true) / 100, true);
-        if (fabs(contourArea(Mat(approx))) < 100000) {
-            int size = approx.size();
-            if (size == 3)
-                showLabel(*img_org, "Triangle", contours[i]);
-            else
-                showLabel(*img_org, "Circle", contours[i]);
-        }
+        int size = approx.size();
+        if (size == 3)
+            showLabel(*img_org, "Triangle", contours[i]);
+        else
+            showLabel(*img_org, "Circle", contours[i]);
     }
 
     return true;
