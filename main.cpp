@@ -9,13 +9,13 @@ int main(int argc, const char** argv) {
 
 	const char* files[4] = {
 		"",
-		"C:\\squid_body.jpg",
-		"C:\\squid_head.jpg",
-		"C:\\squid_points.jpg"
+		"squid_body.png",
+		"squid_head.png",
+		"squid_points.png"
 	};
 	
 	if (!loadFiles((argc == 4 ? argv : files), images)) {
-		//return -1;
+		return -1;
 	}
 	
 	processImages(images);
@@ -28,9 +28,14 @@ int main(int argc, const char** argv) {
 }
 
 bool loadFiles(const char** files, CxImage** images) {
-	images[0]->Load((TCHAR*)files[1], CXIMAGE_FORMAT_PNG);
-	images[1]->Load((TCHAR*)files[2], CXIMAGE_FORMAT_PNG);
-	images[2]->Load((TCHAR*)files[3], CXIMAGE_FORMAT_PNG);
+	for(int i = 0; i < 3; i++) {
+		std::string fileName = std::string(files[i + 1]);
+		std::wstring fileNameByte = std::wstring(fileName.begin(), fileName.end());
+		if(!images[i]->Load(fileNameByte.c_str(), CXIMAGE_FORMAT_PNG)) {
+			std::cout << "Failed to load image from: " << fileName << ". Error: " << images[i]->GetLastError() << "\n";  // GetLastError의 결과를 출력
+			return false;
+		}
+	}
 
 	return (images[0]->IsValid() && images[1]->IsValid() && images[2]->IsValid());
 }
@@ -58,5 +63,7 @@ void processImages(CxImage** images) {
 		}
 	}
 
-	images[0]->Save((TCHAR*)"C:\\Result.jpg", CXIMAGE_FORMAT_PNG);
+	std::string fileName = std::string("Result.png");
+	std::wstring fileNameByte = std::wstring(fileName.begin(), fileName.end());
+	images[0]->Save(fileNameByte.c_str(), CXIMAGE_FORMAT_PNG);
 }
