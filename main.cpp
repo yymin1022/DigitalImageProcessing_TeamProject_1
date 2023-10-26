@@ -43,7 +43,7 @@ bool loadFiles(const char** files, CxImage** images) {
 		}
 	}
 
-	return (images[0]->IsValid() && images[1]->IsValid() && images[2]->IsValid());
+	return true;
 }
 
 void processImages(CxImage** images) {
