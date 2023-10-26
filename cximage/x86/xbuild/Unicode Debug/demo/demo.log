@@ -1,0 +1,58 @@
+﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  StdAfx.cpp
+cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  xTargetButton.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\xTargetButton.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  TwainCpp.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Quantize.cpp
+  MainFrm.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  logomdi.cpp
+  DlgURL.cpp
+  DlgThreshold.cpp
+  DlgText.cpp
+  DlgSkew.cpp
+  DlgShadow.cpp
+  DlgRotate.cpp
+  DlgResample.cpp
+  DlgRepair.cpp
+  DlgPalette.cpp
+  DlgOptions.cpp
+  DlgOpacity.cpp
+  DlgMix.cpp
+  DlgJpeg.cpp
+  DlgIncBpp.cpp
+  DlgHisto.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  DlgGamma.cpp
+  DlgFloodFill.cpp
+  DlgFFT.cpp
+  DlgExpand.cpp
+  DlgDither.cpp
+  DlgDecBpp.cpp
+  DlgDataExt.cpp
+  DlgCustomFilter.cpp
+  DlgCombine.cpp
+  DlgColorize.cpp
+  DlgCapture.cpp
+  demoView.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  demoDoc.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  demo.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\Twain.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  ChildFrm.cpp
+  BCMenu.cpp
+C:\Users\pc03\Desktop\Template\cximage\demo\BCMenu.cpp(83,9): warning C4996: 'GetVersion': deprecated로 선언되었습니다.
+C:\Users\pc03\Desktop\Template\cximage\demo\BCMenu.cpp(90,4): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
+C:\Users\pc03\Desktop\Template\cximage\demo\BCMenu.cpp(105,4): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
+C:\Users\pc03\Desktop\Template\cximage\demo\BCMenu.cpp(1972,11): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(C:\Users\pc03\Desktop\Template\cximage\x86\bin\demo.exe)이(가) Linker의 OutputFile 속성 값(C:\Users\pc03\Desktop\Template\cximage\x86\bin\demo_wd.exe)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Link.OutputFile)에 지정된 값과 일치해야 합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1393,5): warning MSB8012: TargetName(demo)이(가) Linker의 OutputFile 속성 값(demo_wd)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Link.OutputFile)에 지정된 값과 일치해야 합니다.
+BCMenu.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+     C:\Users\pc03\Desktop\Template\cximage\x86\bin\demo.lib 라이브러리 및 C:\Users\pc03\Desktop\Template\cximage\x86\bin\demo.exp 개체를 생성하고 있습니다.
+  demo.vcxproj -> C:\Users\pc03\Desktop\Template\cximage\x86\bin\demo.exe
