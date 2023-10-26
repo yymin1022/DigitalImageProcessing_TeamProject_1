@@ -3,36 +3,50 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char** argv) {
-    Mat img_org, img_gray, img_bin;
+int main() {
+    Mat imgs[4];
+
+    if(detectShape("1.png", &imgs[0]))
+        imshow("1.png", imgs[0]);
+    if(detectShape("2.png", &imgs[1]))
+        imshow("2.png", imgs[1]);
+    if(detectShape("3.png", &imgs[2]))
+        imshow("3.png", imgs[2]);
+    if(detectShape("4.png", &imgs[3]))
+        imshow("4.png", imgs[3]);
+
+    waitKey(0);
+    return 0;
+}
+
+bool detectShape(string fileName, Mat* img_org) {
+    Mat img_gray, img_bin;
     vector<vector<Point>> contours;
 
-    img_org = imread((argc == 2 ? argv[1] : "1.png"), IMREAD_COLOR);
-    if(img_org.empty()) {
-        cout << "Image Not Found: " << (argc == 2 ? argv[1] : "Image.png") << endl;
-        return -1;
+    *img_org = imread(fileName, IMREAD_COLOR);
+    if ((*img_org).empty()) {
+        cout << "Image Not Found: " << fileName << endl;
+        return false;
     }
 
-    imageColorToGray(img_org, img_gray);
+    imageColorToGray(*img_org, img_gray);
     imageGrayToBin(img_gray, img_bin);
     findContours(img_bin, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
 
     vector<Point2f> approx;
-    for(size_t i = 0; i < contours.size(); i++) {
+    for (size_t i = 0; i < contours.size(); i++) {
         approxPolyDP(Mat(contours[i]), approx,
             arcLength(Mat(contours[i]), true) / 100, true);
-        if(fabs(contourArea(Mat(approx))) < 100000) {
+        if (fabs(contourArea(Mat(approx))) < 100000) {
             int size = approx.size();
-            if(size == 3)
-                showLabel(img_org, "Triangle", contours[i]);
+            if (size == 3)
+                showLabel(*img_org, "Triangle", contours[i]);
             else
-                showLabel(img_org, "Circle", contours[i]);
+                showLabel(*img_org, "Circle", contours[i]);
         }
     }
 
-    imshow("Result", img_org);
-    waitKey(0);
-    return 0;
+    return true;
 }
 
 void imageColorToGray(Mat& org, Mat& res) {
