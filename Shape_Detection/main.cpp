@@ -34,7 +34,7 @@ bool detectShape(string fileName, Mat* img_org) {
     findContours(img_bin, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
 
     vector<Point2f> approx;
-    for (size_t i = 0; i < contours.size(); i++) {
+    for (size_t i = 0; i < contours.size() - 1; i++) {
         approxPolyDP(Mat(contours[i]), approx,
             arcLength(Mat(contours[i]), true) / 100, true);
         int size = approx.size();
